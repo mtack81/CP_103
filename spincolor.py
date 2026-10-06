@@ -43,12 +43,17 @@ number_of_shapes = int( 360 / rotate_degrees )
 for quantity in range( int( 360 / rotate_degrees )):
     color = 'white' # ALWAYS SET A DEFAULT COLOR
 
-    # YOUR COLOR CODE HERE
-    # YOUR COLOR CODE HERE
-    # YOUR COLOR CODE HERE
-    # YOUR COLOR CODE HERE
-    # YOUR COLOR CODE HERE
-    # YOUR COLOR CODE HERE
+    counter = counter + 1  # UPDATE COUNTER
+
+    if counter == 1: color = 'yellow'
+    if counter == 2: color = 'red'
+    if counter == 3: color = 'blue'
+    if counter == 4: color = 'green'
+    if counter == 5: color = 'orange'
+    if counter == 6: color = 'purple'
+
+    print( counter , color )
+    if counter >= 6: counter = 0  # RESET COUNTER
 
     hero.color( color )
     hero.right( rotate_degrees )
